@@ -1,0 +1,2288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background-color: #f8f6f0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e0d5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 26px;
+  font-weight: 800;
+  color: #6b3f1d;
+}
+
+.main-nav {
+  display: flex;
+  gap: 26px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-nav a {
+  color: #333;
+}
+
+.main-nav a:hover {
+  color: #9b5c24;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 420px;
+  background-image:
+    linear-gradient(rgba(70, 60, 50, 0.55), rgba(70, 60, 50, 0.55)),
+    url("../images/main-hero.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 24px;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #f5dfb8;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.hero-text {
+  max-width: 560px;
+  font-size: 20px;
+  margin-bottom: 34px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #9b5c24;
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.hero-button:hover {
+  background-color: #7a4318;
+}
+
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  color: #3b2a1b;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #666;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #e8dfd2;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
+}
+
+.info-card h3 {
+  font-size: 24px;
+  color: #6b3f1d;
+  margin-bottom: 14px;
+}
+
+.info-card p {
+  color: #555;
+  margin-bottom: 22px;
+}
+
+.info-card a {
+  font-weight: 700;
+  color: #9b5c24;
+}
+
+.notice-section {
+  padding-top: 40px;
+}
+
+.notice-list {
+  background-color: #ffffff;
+  border: 1px solid #e8dfd2;
+  border-radius: 18px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.notice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 28px;
+  border-bottom: 1px solid #eee7dc;
+}
+
+.notice-list li:last-child {
+  border-bottom: none;
+}
+
+.notice-list a {
+  font-weight: 600;
+}
+
+.notice-list span {
+  color: #888;
+  white-space: nowrap;
+}
+
+.site-footer {
+  background-color: #3b2a1b;
+  color: #ffffff;
+  text-align: center;
+  padding: 36px 20px;
+  font-size: 15px;
+}
+
+.site-footer p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 16px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: 460px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .notice-list li {
+    flex-direction: column;
+    gap: 6px;
+  }
+}/* 하위 페이지 공통 */
+.sub-hero {
+  background: linear-gradient(
+      rgba(59, 42, 27, 0.72),
+      rgba(59, 42, 27, 0.72)
+    ),
+    url("../images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 110px 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sub-hero-inner p {
+  font-size: 18px;
+  color: #f5dfb8;
+  margin-bottom: 10px;
+}
+
+.sub-hero-inner h1 {
+  font-size: 46px;
+  letter-spacing: -1px;
+}
+
+.sub-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.content-section {
+  margin-bottom: 100px;
+}
+
+.content-section h2 {
+  font-size: 32px;
+  color: #3b2a1b;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #9b5c24;
+}
+
+.content-section p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.content-grid article {
+  background-color: #ffffff;
+  border: 1px solid #e8dfd2;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
+}
+
+.content-grid h3 {
+  color: #6b3f1d;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .sub-hero {
+    padding: 80px 20px;
+  }
+
+  .sub-hero-inner h1 {
+    font-size: 36px;
+  }
+
+  .sub-page {
+    padding: 50px 20px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+  }
+
+  .content-section p {
+    font-size: 16px;
+  }
+}/* 행사사진 페이지 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-card {
+  background-color: #ffffff;
+  border: 1px solid #e8dfd2;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
+}
+
+.gallery-placeholder {
+  height: 190px;
+  background: linear-gradient(135deg, #c7b8a3, #8b7a68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.gallery-text {
+  padding: 24px;
+}
+
+.gallery-text h3 {
+  color: #6b3f1d;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.gallery-text p {
+  color: #555;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-placeholder {
+    height: 220px;
+  }
+}/* 후원안내 페이지 */
+.donation-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.donation-box > div {
+  background-color: #ffffff;
+  border: 1px solid #e8dfd2;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
+}
+
+.donation-box h3 {
+  color: #6b3f1d;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.donation-box p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .donation-box {
+    grid-template-columns: 1fr;
+  }
+}/* 모바일 메뉴 작동 */
+@media (max-width: 768px) {
+  .main-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e0d5;
+    border-bottom: 1px solid #e5e0d5;
+    padding: 16px 24px;
+    gap: 14px;
+    box-shadow: 0 8px 18px rgba(70, 45, 20, 0.08);
+  }
+
+  .main-nav.active a {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #3b2a1b;
+    border-bottom: 1px solid #f0e8dc;
+  }
+
+  .main-nav.active a:last-child {
+    border-bottom: none;
+  }
+
+  .site-header {
+    position: sticky;
+  }
+}/* 하위 페이지 상단 배너 글자 크기 통일 */
+.sub-hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: #75685d;
+  color: #fff;
+}
+
+.sub-hero-inner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sub-hero-inner p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #f3d58a;
+}
+/* ===============================
+   하위 페이지 공통 디자인 통일
+================================ */
+
+/* 전체 기본 */
+body {
+  background: #f7f3eb;
+  color: #2f2118;
+}
+
+/* 상단 메뉴 영역 */
+.site-header {
+  height: 72px;
+  background: #ffffff;
+}
+
+.header-inner {
+  max-width: 920px;
+  height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 20px;
+  font-weight: 800;
+  color: #5a2f0f;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2f2118;
+  text-decoration: none;
+}
+
+/* 하위 페이지 상단 배너 */
+.sub-hero {
+  height: 170px;
+  padding: 0 20px;
+  background: #776a5f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sub-hero-inner h1 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.sub-hero-inner p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  color: #f2d68b;
+}
+
+/* 하위 페이지 본문 폭과 여백 */
+.sub-page {
+  max-width: 920px;
+  min-height: 520px;
+  margin: 0 auto;
+  padding: 64px 20px 72px;
+}
+
+/* 본문 섹션 */
+.content-section {
+  margin-bottom: 56px;
+}
+
+.content-section h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #b66a2c;
+  color: #2f2118;
+}
+
+.content-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0 0 10px;
+  color: #3b3028;
+}
+
+/* 카드 공통 */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.content-grid article {
+  min-height: 120px;
+  padding: 26px 24px;
+  background: #ffffff;
+  border: 1px solid #e3d4c3;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(70, 45, 25, 0.08);
+}
+
+.content-grid article h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: #5a2f0f;
+}
+
+.content-grid article p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* 공지 목록 */
+.notice-list {
+  border: 1px solid #e3d4c3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.notice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #eee2d6;
+  font-size: 14px;
+}
+
+.notice-list li:last-child {
+  border-bottom: none;
+}
+
+.notice-list a {
+  color: #2f2118;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.notice-list span {
+  color: #8c7b6c;
+  font-size: 13px;
+}
+
+/* 사진첩 카드 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3d4c3;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(70, 45, 25, 0.08);
+}
+
+.gallery-thumb {
+  height: 150px;
+  background: #a79683;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.gallery-card .gallery-info {
+  padding: 22px;
+}
+
+.gallery-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #5a2f0f;
+}
+
+.gallery-card p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 하단 */
+.site-footer {
+  min-height: 96px;
+  padding: 28px 20px;
+  background: #3b2414;
+  color: #ffffff;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+}/* ===============================
+   개운사 하위 페이지 공통 디자인 보정
+================================ */
+
+/* 전체 배경과 기본 글자 */
+body {
+  background: #f7f3eb;
+  color: #2f2118;
+}
+
+/* 상단 메뉴 통일 */
+.site-header {
+  height: 72px;
+  background: #ffffff;
+}
+
+.header-inner {
+  max-width: 920px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 20px;
+  font-weight: 800;
+  color: #5a2f0f;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.main-nav a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2f2118;
+  text-decoration: none;
+}
+
+/* 하위 페이지 상단 배너 통일 */
+.sub-hero {
+  height: 170px;
+  padding: 0 20px;
+  background: #776a5f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sub-hero-inner h1 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.sub-hero-inner p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  color: #f2d68b;
+}
+
+/* 하위 페이지 본문 폭과 여백 통일 */
+.sub-page {
+  max-width: 920px;
+  min-height: 520px;
+  margin: 0 auto;
+  padding: 64px 20px 72px;
+}
+
+/* 본문 섹션 통일 */
+.content-section {
+  margin-bottom: 56px;
+}
+
+.content-section h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #b66a2c;
+  color: #2f2118;
+}
+
+.content-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0 0 10px;
+  color: #3b3028;
+}
+
+/* 카드 공통 통일 */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.content-grid article {
+  min-height: 120px;
+  padding: 26px 24px;
+  background: #ffffff;
+  border: 1px solid #e3d4c3;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(70, 45, 25, 0.08);
+}
+
+.content-grid article h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: #5a2f0f;
+}
+
+.content-grid article p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* 공지 목록 통일 */
+.notice-list {
+  border: 1px solid #e3d4c3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #eee2d6;
+  font-size: 14px;
+}
+
+.notice-list li:last-child {
+  border-bottom: none;
+}
+
+.notice-list a {
+  color: #2f2118;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.notice-list span {
+  color: #8c7b6c;
+  font-size: 13px;
+}
+
+/* 사진첩 카드 통일 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3d4c3;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(70, 45, 25, 0.08);
+}
+
+.gallery-thumb {
+  height: 150px;
+  background: #a79683;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.gallery-card .gallery-info {
+  padding: 22px;
+}
+
+.gallery-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #5a2f0f;
+}
+
+.gallery-card p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 하단 footer 통일 */
+.site-footer {
+  min-height: 96px;
+  padding: 28px 20px;
+  background: #3b2414;
+  color: #ffffff;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 태블릿 대응 */
+@media (max-width: 900px) {
+  .header-inner {
+    max-width: 100%;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+  }
+
+  .content-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 대응 */
+@media (max-width: 640px) {
+  .site-header {
+    height: auto;
+  }
+
+  .header-inner {
+    height: auto;
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+  }
+
+  .sub-hero {
+    height: 150px;
+  }
+
+  .sub-hero-inner h1 {
+    font-size: 26px;
+  }
+
+  .sub-page {
+    padding: 48px 20px 60px;
+  }
+
+  .content-section h2 {
+    font-size: 23px;
+  }
+
+  .content-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}@media (max-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 20px;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+}/* 모바일 메뉴 기본 설정 */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2f2118;
+  cursor: pointer;
+}
+
+/* 모바일 화면 */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 20px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 6px;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav a {
+    font-size: 15px;
+    font-weight: 700;
+  }
+}/* ===============================
+   Main Hero Section
+================================ */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background:
+    linear-gradient(rgba(30, 24, 18, 0.45), rgba(30, 24, 18, 0.55)),
+    url("../images/main-hero.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  color: #f2d8a7;
+}
+
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 34px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.btn.primary {
+  background: #b8860b;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.92);
+  color: #3b2f22;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ===============================
+   Main Section
+================================ */
+
+.main-section,
+.notice-preview {
+  padding: 80px 20px;
+  background: #faf7f1;
+}
+
+.section-title {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.section-title p {
+  color: #b8860b;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  margin-bottom: 14px;
+  color: #2f261d;
+}
+
+.section-title span {
+  display: block;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.card-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.info-card {
+  background: #fff;
+  padding: 34px 26px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+}
+
+.info-card h3 {
+  font-size: 23px;
+  margin-bottom: 16px;
+  color: #3b2f22;
+}
+
+.info-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 22px;
+}
+
+.info-card a {
+  color: #b8860b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* ===============================
+   Notice Preview
+================================ */
+
+.notice-preview {
+  background: #fff;
+}
+
+.notice-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.notice-item {
+  display: block;
+  padding: 24px 28px;
+  border: 1px solid #eee3d1;
+  border-radius: 14px;
+  text-decoration: none;
+  background: #fffdf8;
+  transition: 0.25s;
+}
+
+.notice-item:hover {
+  background: #faf1df;
+}
+
+.notice-item strong {
+  display: block;
+  font-size: 19px;
+  color: #2f261d;
+  margin-bottom: 8px;
+}
+
+.notice-item span {
+  color: #666;
+  font-size: 15px;
+}
+
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 460px;
+    padding: 70px 18px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 28px 22px;
+  }
+
+  .notice-item {
+    padding: 22px;
+  }
+}/* ===============================
+   Notice Board Page
+================================ */
+
+.sub-section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.sub-title {
+  margin-bottom: 34px;
+  border-bottom: 2px solid #b8860b;
+  padding-bottom: 18px;
+}
+
+.sub-title h2 {
+  font-size: 30px;
+  color: #2f261d;
+  margin-bottom: 12px;
+}
+
+.sub-title p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.notice-board {
+  border-top: 2px solid #3b2f22;
+  margin-top: 24px;
+}
+
+.notice-board-header,
+.notice-board-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 110px 130px;
+  align-items: center;
+  gap: 12px;
+}
+
+.notice-board-header {
+  background: #f4eadc;
+  color: #3b2f22;
+  font-weight: 700;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e1d0b8;
+}
+
+.notice-board-row {
+  padding: 18px;
+  border-bottom: 1px solid #eadfce;
+  text-decoration: none;
+  color: #333;
+  transition: 0.25s;
+}
+
+.notice-board-row:hover {
+  background: #fff8eb;
+}
+
+.notice-board-row strong {
+  color: #2f261d;
+  font-size: 17px;
+}
+
+.notice-board-row span {
+  font-size: 15px;
+  color: #666;
+}
+
+.notice-guide-box {
+  margin-top: 40px;
+  padding: 26px 30px;
+  background: #fffdf8;
+  border: 1px solid #eadfce;
+  border-radius: 16px;
+}
+
+.notice-guide-box h3 {
+  font-size: 22px;
+  color: #3b2f22;
+  margin-bottom: 12px;
+}
+
+.notice-guide-box p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+
+/* 모바일 공지사항 */
+@media (max-width: 700px) {
+  .notice-board-header {
+    display: none;
+  }
+
+  .notice-board-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 18px;
+  }
+
+  .notice-board-row span:first-child {
+    font-weight: 700;
+    color: #b8860b;
+  }
+
+  .notice-board-row strong {
+    font-size: 18px;
+  }
+
+  .sub-title h2 {
+    font-size: 26px;
+  }
+}/* ===============================
+   Gallery Page
+================================ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.gallery-card {
+  background: #fff;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+  transition: 0.25s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-image {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-image {
+  background:
+    linear-gradient(rgba(69, 50, 34, 0.45), rgba(69, 50, 34, 0.45)),
+    #c9b79d;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.gallery-content {
+  padding: 24px 22px;
+}
+
+.gallery-content h3 {
+  font-size: 20px;
+  color: #2f261d;
+  margin-bottom: 10px;
+}
+
+.gallery-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+
+/* 모바일 갤러리 */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image {
+    height: 210px;
+  }
+}/* ===============================
+   Prayer Page
+================================ */
+
+.prayer-schedule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.schedule-card {
+  background: #fff;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.schedule-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f4eadc;
+  color: #9a6b00;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.schedule-card h3 {
+  font-size: 22px;
+  color: #2f261d;
+  margin-bottom: 14px;
+}
+
+.schedule-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.schedule-card ul {
+  padding-left: 18px;
+}
+
+.schedule-card li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.application-box {
+  margin-top: 44px;
+  padding: 32px;
+  border-radius: 18px;
+  background: #3b2f22;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.application-box h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.application-box p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f3e7d4;
+}
+
+.application-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #b8860b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.prayer-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.prayer-info-grid article {
+  background: #fffdf8;
+  border: 1px solid #eadfce;
+  border-radius: 16px;
+  padding: 26px 24px;
+}
+
+.prayer-info-grid h3 {
+  font-size: 20px;
+  color: #2f261d;
+  margin-bottom: 10px;
+}
+
+.prayer-info-grid p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+
+/* 모바일 법회·기도 */
+@media (max-width: 900px) {
+  .prayer-schedule,
+  .prayer-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .application-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}/* ===============================
+   Donation Page
+================================ */
+
+.donation-intro-box {
+  margin-top: 32px;
+  padding: 34px 36px;
+  background: #3b2f22;
+  color: #fff;
+  border-radius: 18px;
+}
+
+.donation-intro-box h3 {
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+
+.donation-intro-box p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f3e7d4;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.donation-card {
+  background: #fff;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.donation-card span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #b8860b;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.donation-card h3 {
+  font-size: 21px;
+  color: #2f261d;
+  margin-bottom: 12px;
+}
+
+.donation-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.donation-method-section {
+  margin-top: 46px;
+}
+
+.donation-method-section > h3 {
+  font-size: 26px;
+  color: #2f261d;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #b8860b;
+}
+
+.donation-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.method-card {
+  background: #fffdf8;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  padding: 30px 28px;
+}
+
+.method-card h4 {
+  font-size: 22px;
+  color: #2f261d;
+  margin-bottom: 16px;
+}
+
+.method-card ul {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+
+.method-card li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.method-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.donation-notice-box {
+  margin-top: 42px;
+  padding: 32px;
+  border-radius: 18px;
+  background: #f4eadc;
+  border: 1px solid #eadfce;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+}
+
+.donation-notice-box h3 {
+  font-size: 23px;
+  color: #2f261d;
+  margin-bottom: 10px;
+}
+
+.donation-notice-box p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.donation-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #b8860b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* 모바일 후원안내 */
+@media (max-width: 900px) {
+  .donation-grid,
+  .donation-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-notice-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}/* ===============================
+   About Page
+================================ */
+
+.about-intro-box {
+  margin-top: 32px;
+  padding: 40px 38px;
+  background: #3b2f22;
+  color: #fff;
+  border-radius: 18px;
+}
+
+.about-intro-box span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #f2d8a7;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-intro-box h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.about-intro-box p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #f3e7d4;
+}
+
+.about-section-title {
+  margin-top: 46px;
+  margin-bottom: 24px;
+}
+
+.about-section-title h3 {
+  font-size: 26px;
+  color: #2f261d;
+  margin-bottom: 10px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #b8860b;
+}
+
+.about-section-title p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.about-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about-value-card {
+  background: #fff;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.about-value-card span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #b8860b;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.about-value-card h3 {
+  font-size: 21px;
+  color: #2f261d;
+  margin-bottom: 12px;
+}
+
+.about-value-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.temple-info-section {
+  margin-top: 46px;
+}
+
+.temple-info-section > h3 {
+  font-size: 26px;
+  color: #2f261d;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #b8860b;
+}
+
+.temple-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.temple-info-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  background: #fffdf8;
+  border: 1px solid #eadfce;
+  border-radius: 14px;
+}
+
+.temple-info-item strong {
+  color: #2f261d;
+  font-size: 16px;
+}
+
+.temple-info-item span {
+  color: #666;
+  font-size: 15px;
+}
+
+.about-notice-box {
+  margin-top: 42px;
+  padding: 32px;
+  border-radius: 18px;
+  background: #f4eadc;
+  border: 1px solid #eadfce;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+}
+
+.about-notice-box h3 {
+  font-size: 23px;
+  color: #2f261d;
+  margin-bottom: 10px;
+}
+
+.about-notice-box p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.about-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #b8860b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* 모바일 사찰소개 */
+@media (max-width: 900px) {
+  .about-value-grid,
+  .temple-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-notice-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .temple-info-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+}/* ===============================
+   Culture Page
+================================ */
+
+.culture-intro-box {
+  margin-top: 32px;
+  padding: 40px 38px;
+  background: #3b2f22;
+  color: #fff;
+  border-radius: 18px;
+}
+
+.culture-intro-box span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #f2d8a7;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.culture-intro-box h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.culture-intro-box p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #f3e7d4;
+}
+
+.culture-section-title {
+  margin-top: 46px;
+  margin-bottom: 24px;
+}
+
+.culture-section-title h3 {
+  font-size: 26px;
+  color: #2f261d;
+  margin-bottom: 10px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #b8860b;
+}
+
+.culture-section-title p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.culture-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.culture-card {
+  background: #fff;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.culture-card span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #b8860b;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.culture-card h3 {
+  font-size: 21px;
+  color: #2f261d;
+  margin-bottom: 12px;
+}
+
+.culture-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.culture-program-section {
+  margin-top: 46px;
+}
+
+.culture-program-section > h3 {
+  font-size: 26px;
+  color: #2f261d;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #b8860b;
+}
+
+.culture-program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.culture-program-grid article {
+  background: #fffdf8;
+  border: 1px solid #eadfce;
+  border-radius: 16px;
+  padding: 26px 24px;
+}
+
+.culture-program-grid h4 {
+  font-size: 20px;
+  color: #2f261d;
+  margin-bottom: 10px;
+}
+
+.culture-program-grid p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.culture-notice-box {
+  margin-top: 42px;
+  padding: 32px;
+  border-radius: 18px;
+  background: #f4eadc;
+  border: 1px solid #eadfce;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+}
+
+.culture-notice-box h3 {
+  font-size: 23px;
+  color: #2f261d;
+  margin-bottom: 10px;
+}
+
+.culture-notice-box p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.culture-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #b8860b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* 모바일 불교문화 */
+@media (max-width: 900px) {
+  .culture-card-grid,
+  .culture-program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .culture-notice-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}/* ==============================
+   Mobile Final Adjustment
+   ============================== */
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 22px 0 18px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .logo a {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    font-size: 30px;
+    margin-top: 4px;
+  }
+
+  .main-nav {
+    width: 100%;
+    padding: 18px 0 22px;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 12px 0;
+    font-size: 17px;
+  }
+
+  .hero,
+  .sub-hero {
+    padding: 56px 20px;
+  }
+
+  .main-section,
+  .sub-section {
+    padding: 52px 20px;
+  }
+
+  .section-title {
+    margin-bottom: 28px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-title span,
+  .section-title p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .card-grid,
+  .prayer-card-grid,
+  .culture-content-grid,
+  .culture-program-grid,
+  .gallery-grid,
+  .donation-purpose-grid,
+  .donation-method-section,
+  .temple-info-section,
+  .prayer-info-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card,
+  .prayer-card,
+  .culture-card,
+  .gallery-card,
+  .donation-card,
+  .method-card,
+  .temple-info-item,
+  .about-notice-box,
+  .culture-notice-box,
+  .notice-guide-box,
+  .donation-notice-box {
+    padding: 26px 24px;
+  }
+
+  .dark-info-box,
+  .application-box,
+  .donation-message-box {
+    padding: 28px 24px;
+  }
+
+  .notice-board-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 16px;
+  }
+
+  .site-footer {
+    padding: 28px 20px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.gallery-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eadfce;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card-body {
+  padding: 22px;
+}
+
+.gallery-card-body h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.gallery-card-body p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+}.about-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.about-image-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eadfce;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image-body {
+  padding: 26px;
+}
+
+.about-image-body h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.about-image-body p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .about-image-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-image-card img {
+    height: 230px;
+  }
+
+  .about-image-body {
+    padding: 22px;
+  }
+}
